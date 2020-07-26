@@ -1,0 +1,27 @@
+ion-header{
+    font-family: 'Teko', sans-serif;
+}
+
+ion-card-content {
+    h2{
+        color:red;
+        font-style: italic;
+    }
+    
+    ion-label{
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 700;
+        font-size:larger;
+        --color: rgba(13, 255, 138, 0.931); 
+        text-shadow: blue($color: #4d07f3);
+    }
+}
+ion-list-header{
+    font-family: 'Noto Sans', sans-serif;
+    --color: rgb(37, 5, 216);
+    border-radius: 10px;
+    background-color: rgba(13, 255, 138, 0.931);
+    width:90%;
+   
+  
+} 

@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title>
+      Message Feed
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <div class="post" *ngFor="let p of allPosts">
+    
+    <ion-img *ngIf="p.imageUrl" src="{{p.imageUrl}}"></ion-img>
+
+    <div  class="info">
+      <h6 class="message">{{p.text}}</h6> 
+     
+        <ion-chip>
+          <ion-avatar>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT--64Dvl4gqfLSH6KqQHEYVumbItzbVFiNJg&usqp=CAU">
+          </ion-avatar>
+          <ion-label class="user">{{p.from}}</ion-label>
+        </ion-chip>
+        <ion-label class="timeStamp">{{p.timeStamp | date:"MMM/dd/yyyy  hh:mm:ss"}}</ion-label>
+        
+    </div>
+ 
+  </div>
+</ion-content>

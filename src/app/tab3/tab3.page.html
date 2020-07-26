@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title >
+      Manage Friends
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Register friend -->
+  <ion-card>
+    <ion-card-content>
+      <h2 class="section-header">Register Friends</h2>
+      <ion-item>
+        <ion-label position="stacked">Name:</ion-label>
+        <ion-input [(ngModel)]="model.name" name="friendName"></ion-input>
+      </ion-item>
+
+      <ion-button (click)="saveFriend()" color="primary">
+        Save 
+        <ion-icon name="push"></ion-icon>
+      </ion-button>
+    
+    </ion-card-content>    
+  </ion-card>
+  <!-- List my friends -->
+  <ion-list-header>
+    <ion-label class="section-header">Current Friends</ion-label>
+  </ion-list-header>
+  <ion-list>
+    <ion-item *ngFor="let friend of myFriends">
+      <ion-icon name="logo-ionitron" color="success"></ion-icon>
+      <ion-label color="primary">{{friend.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>
